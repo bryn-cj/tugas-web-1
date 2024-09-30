@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Split: Tabel Biasa & Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 20px;
+        }
+        .split-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .split {
+            width: 48%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Split: Kiri Tabel Biasa, Kanan Tabel Bootstrap</h1>
+    <div class="split-container">
+        <!-- Bagian Kiri: Tabel Biasa -->
+        <div class="split">
+            <h2>Form Tabel Biasa</h2>
+            <form>
+                <table>
+                    <tr>
+                        <th>Label</th>
+                        <th>Input</th>
+                    </tr>
+                    <tr>
+                        <td>Nama</td>
+                        <td><input type="text" name="nama"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <!-- Bagian Kanan: Tabel Bootstrap -->
+        <div class="split">
+            <h2>Form Tabel Bootstrap</h2>
+            <form>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Label</th>
+                            <th>Input</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nama</td>
+                            <td><input type="text" class="form-control" name="nama"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="email" class="form-control" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td><input type="password" class="form-control" name="password"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
